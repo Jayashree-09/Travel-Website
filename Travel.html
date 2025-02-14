@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container"><br>
+            <a href="#home" class="logo">Travel Explorer</a>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>   
+               <li><a href="#" id="authButton" >SignIn</a></li>
+            </ul>
+            <!-- <div class="menu-toggle" id="menu-toggle">&#9776;</div> -->
+        </div>
+    </nav>
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <!-- Sign In Form (Shown when not signed in) -->
+            <div id="signInForm">
+                <h2>Sign In</h2>
+                <input type="text" id="username" placeholder="Enter Username">
+                <input type="password" id="password" placeholder="Enter Password">
+                <button class="one" id="signInBtn">Sign In</button>
+            </div>
+    
+            <!-- Sign Out Message (Shown when signed in) -->
+            <div id="signOutMessage" style="display: none;">
+                <p>✅ You are signed in successfully!</p>
+                <button class="one"  id="signOutBtn">Sign Out</button>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Home Section with Auto Sliding Effect -->
+    <section id="home" class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide slide1">
+                <h1>Discover Your Next Adventure</h1>
+                <p>Explore breathtaking destinations with us</p>
+                <a href="#services" class="btn-main">Explore Tours</a>
+            </div>
+            <div class="slide slide2">
+                <h1>Exotic Destinations Await</h1>
+                <p>Plan your dream vacation today</p>
+                <a href="#destinations" class="btn-main">View Destinations</a>
+            </div>
+            <div class="slide slide3">
+                <h1>Travel Made Easy</h1>
+                <p>Book your trip with expert guidance</p>
+                <a href="#contact" class="btn-main">Contact Us</a>
+            </div>
+            <div class="slide duplicate-slide1">
+                <h1>Discover Your Next Adventure</h1>
+                <p>Explore breathtaking destinations with us</p>
+                <a href="#services" class="btn-main">Explore Tours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text">About Us</h2>
+            <p>Travel Explorer is your go-to travel agency for unforgettable journeys. We specialize in crafting personalized travel experiences to the world's most stunning destinations.</p>
+            <h3>Our Mission</h3>
+            <p>Our mission is to make travel seamless, exciting, and affordable for all adventure seekers.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Tour Packages</h3>
+                    <p>Customized travel packages for every type of traveler.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Adventure Trips</h3>
+                    <p>Exciting outdoor adventures including hiking, diving, and more.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Luxury Resorts</h3>
+                    <p>Stay in the finest hotels and resorts at the best prices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Top Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-item">
+                    <h3>Bali, Indonesia</h3>
+                    <img src="indo.jpg" alt="Bali">
+                    <button class="btn-destination" onclick="explorePlace('Bali Indonesia')">Explore More</button>
+                </div>
+                <div class="destination-item">
+                    <h3>Paris, France</h3>
+                    <img src="paris.jpg" alt="Paris">
+                    <button class="btn-destination" onclick="explorePlace('Paris, France')">Explore More</button>
+                </div>
+                <div class="destination-item">
+                    <h3>Swiss Alps, Switzerland</h3>
+                    <img src="swiz.jpg" alt="Swiss Alps">
+                    <button class="btn-destination"onclick="explorePlace('Swiss Alps, Switzerland')">Explore More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Footer -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Plan your next trip with us! Get in touch for inquiries and bookings.</p><br>
+            <a href="mailto:contact@travelexplorer.com" class="email-button">Email Us</a>
+       
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>Travel Website</h3>
+                        <p>Empowering businesses with <br>innovative IT solutions.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>Email: <a href="info@travelexplorer.com">contact@travelexplorer.com</a></p>
+                        <p>Phone: +123 456 7890</p>
+                        <p>Address: 123 IT Street, Tech City</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 IT Company. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="insta.webp" alt="LinkedIn"></a>
+            </div>
+        </footer>
+        </div>
+    </section>
+
+    <script src="Travel.js"></script>
+</body>
+</html>
